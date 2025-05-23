@@ -1,0 +1,26 @@
+<!-- templates/accounts/student_batch_result.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>生成結果</title>
+</head>
+<body>
+    <h1>✅ アカウント生成結果</h1>
+
+    <table border="1">
+        <tr>
+            <th>学籍番号</th>
+            <th>初期パスワード</th>
+        </tr>
+        {% for student_id, password in users %}
+        <tr>
+            <td>{{ student_id }}</td>
+            <td>{{ password }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p><a href="{% url 'student_batch_create' %}">← もう一度作成する</a></p>
+</body>
+</html>

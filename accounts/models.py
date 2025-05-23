@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+#　暫時的なクラス設計＿後々整形する
 class CustomUser(AbstractUser):
     USER_TYPE_CHOICES = (
         ('student', 'Student'),
