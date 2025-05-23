@@ -1,25 +1,20 @@
 # Python
 __pycache__/
 *.py[cod]
-*.env
-*.venv
-env/
-venv/
 
 # Django
-*.sqlite3
 db.sqlite3
 /media/
+staticfiles/
 *.log
 
-# macOS
-.DS_Store
+# 環境ファイル
+.env
+*.env
 
-# IDEs
+# OS / IDE
+.DS_Store
 .vscode/
 .idea/
 
-# Pip
-pip-log.txt
-requirements.txt~
 
