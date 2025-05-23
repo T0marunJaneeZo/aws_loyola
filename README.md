@@ -13,20 +13,21 @@
 ---
 
 ### 環境構築手順（開発者向け）
-git clone https://github.com/T0marunJaneeZo/aws_loyola.git   # ← GitHubからプロジェクトをコピー（初回のみ）
-cd aws_loyola                                                # ← コピーしたディレクトリに移動
-python -m venv venv                                          # ← 仮想環境を作成
-source venv/bin/activate                                     # ← 仮想環境を有効化（Mac/Linux）
-pip install -r requirements.txt                              # ← 必要なライブラリを一括インストール
-cp .env.example .env                                         # ← 環境変数ファイルをコピーして準備
-python manage.py migrate                                     # ← DB構造を反映
-python manage.py runserver                                   # ← サーバー起動
-
-## 更新履歴
+~~~zsh
+git clone https://github.com/T0marunJaneeZo/aws_loyola.git
+cd aws_loyola
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+python manage.py migrate
+python manage.py runserver
+~~~
 
 - 2025/05/23: カスタムユーザーモデル（CustomUser）作成 & マイグレーション済み
 
 ## Loyola 履修管理システム
+~~~zsh:tree
 .
 ├── Dockerfile
 ├── README.md
@@ -37,10 +38,12 @@ python manage.py runserver                                   # ← サーバー�
 ├── requirements.txt
 ├── templates
 │   └── accounts                                              # ./accountsのテンプレート
-└── venv                                                          
+└── venv      
+~~~                                                    
 
 ###     アカウント登録機能（暫時）
 
+~~~zsh:tree
 ./accounts
     ├── __init__.py
     ├── admin.py
@@ -51,3 +54,4 @@ python manage.py runserver                                   # ← サーバー�
     ├── tests.py  
     ├── urls.py                                                 
     └── views.py                                               # ←　生徒一括登録のビュー
+~~~
